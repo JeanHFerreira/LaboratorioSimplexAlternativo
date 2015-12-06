@@ -12,7 +12,7 @@ public class Principal {
 		Date hora = Calendar.getInstance().getTime(); // Ou qualquer outra forma que tem
 		String dataFormatada = sdf.format(hora);
 		System.out.println("Iniciando programa: " + dataFormatada);
-		String nome = "teste1.txt";
+		String nome = "";
 		if (args.length != 0) {
 			nome = args[0];
 		}
