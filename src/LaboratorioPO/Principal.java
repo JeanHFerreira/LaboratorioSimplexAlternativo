@@ -18,7 +18,7 @@ public class Principal {
 		}
 		Arquivo arquivo = new Arquivo(nome);
 		Problema problema = arquivo.pegarProblema();
-		if ((problema != null) || (!nome.equals(""))) {
+		if ((problema != null) && (!nome.equals(""))) {
 			System.out.println("Problema");
 			problema.mostrarProblema();
 			Problema dual = problema.transformarDual();
