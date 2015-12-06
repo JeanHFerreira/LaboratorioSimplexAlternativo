@@ -1,40 +1,28 @@
 package LaboratorioPO;
 
 public class Arquivo {
-	
-	private String nome="";
-	
-	public Arquivo(){}
-	
-	public Arquivo(String nome){
-		this.nome=nome;
+
+	private String nome = "";
+
+	@SuppressWarnings("unused")
+	private Arquivo() {}
+
+	public Arquivo(String nome) {
+		this.nome = nome;
 	}
-	
+
 	/**
-	 * Retorna true para arquivo válido
-	 * Retorna false para arquivo inválido*/
-	public boolean validarArquivo(){
-		return true;
-	}
-	
-	/**
-	 * Cria um problema a partir de um arquivo*/
-	public Problema pegarProblema(String nome){
-		if((this.nome==null)&&(nome==null)){
+	 * Cria um problema a partir de um arquivo Retorna o problema se arquivo
+	 * válido Retorna null para arquivo inválido
+	 */
+	public Problema pegarProblema() {
+		if ((this.nome == null)||(this.nome.equals(""))) {
 			return null;
-		}
-		if(this.nome==null && nome !=null){
-			this.nome=nome;
 		}
 		
-		if(!this.validarArquivo()){
-			return null;
-		}
+
 		Problema problema = new Problema();
 		return problema;
 	}
-	
-	public Problema pegarProblema(){
-		return this.pegarProblema(null);
-	}
+
 }
