@@ -55,8 +55,10 @@ public class Arquivo {
 			}
 			quantidadeVariaveis=Integer.parseInt(linha.substring(0, separador));
 			quantidadeRestricoes=Integer.parseInt(linha.substring(separador+1,linha.length()));
-			System.out.println(quantidadeRestricoes);
-			System.out.println(quantidadeVariaveis);
+			if((quantidadeVariaveis<=0)||(quantidadeRestricoes<0)){
+				buffer.close();
+				return null;
+			}
 			for(int i =1; i<=buffer.lines().count()-3;i++){
 				buffer.lines();
 				linha = buffer.readLine();
